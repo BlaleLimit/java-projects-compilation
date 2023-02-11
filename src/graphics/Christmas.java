@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
-public class UltimaTree extends Frame {
+public class Christmas extends Frame {
     static final int X = 400;
     static final int Y = 300;
     static double dist = 30;
@@ -15,7 +15,7 @@ public class UltimaTree extends Frame {
     static String greet = "Merry Christmas and Happy New Year!!!";
     
     // Window Closing functionality
-    UltimaTree() {
+    Christmas() {
         addWindowListener (new WindowAdapter() {    
             public void windowClosing (WindowEvent e) {    
                 dispose();    

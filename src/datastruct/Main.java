@@ -47,6 +47,8 @@ public class Main {
                     selector();
                 }
             }
+            
+            scan.close();
         }
     }
 
@@ -179,6 +181,7 @@ class CircularArray {
             input(mode);
         }
 
+        scan.close();
         return temp;
     }
 
@@ -235,6 +238,8 @@ class CircularArray {
                 choice(arr, size);
             }
         }
+
+        scan.close();
     }
 
     public void process() {
@@ -349,6 +354,7 @@ class CStack {
             input(mode);
         }
 
+        scan.close();
         return temp;
     }
 
@@ -415,6 +421,8 @@ class CStack {
                 choice(stack, size);
             }
         }
+
+        scan.close();
     }
 
     public void process() {
@@ -469,6 +477,7 @@ class CLinkedList {
             input();
         }
 
+        scan.close();
         return temp;
     }
 
@@ -542,6 +551,8 @@ class CLinkedList {
                 choice(list);
             }
         }
+
+        scan.close();
     }
 
     public void process() {
@@ -586,6 +597,7 @@ class CHashMap {
             input();
         }
 
+        scan.close();
         return temp;
     }
 
@@ -647,6 +659,8 @@ class CHashMap {
                 choice(hm);
             }
         }
+
+        scan.close();
     }
 
     public void process() {

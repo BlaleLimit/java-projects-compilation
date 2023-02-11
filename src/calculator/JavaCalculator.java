@@ -114,24 +114,7 @@ public class JavaCalculator extends JFrame
 		jbtSin.addActionListener(new ListenToSin());
 		jbtCos.addActionListener(new ListenToCos());
 		jbtTan.addActionListener(new ListenToTan());
-		
-		/* 
-			other op
-		*/
     }
-
-    /*class ListenNum implements ActionListener
-	{
-		public void actionPerformed(ActionEvent e)
-		{
-			JButton num = (JButton) e.getSource();
-			String num_ = num.getText();
-			display = jtfOutput.getText();
-			jtfOutput.setText(display + num);
-			display2 = jtfInput.getText();
-			jtfInput.setText(display2 + num);
-		}
-	}*/
 	
 	class ListenToOne implements ActionListener 
 	{
@@ -607,28 +590,7 @@ public class JavaCalculator extends JFrame
 		
 		return ans;
 	}
-	
-	/*public double calculateSin(Double d)
-	{
-		double ans = 0.0;
-		
-		for (int i = 1, j = 1; i < 49; i+=2, j*=-1)
-		{
-			ans = ans + j * (Math.pow(d, i)/factorial(i));
-			System.out.println(ans + ", " + Math.pow(d, i) + ", " +factorial(i) + ", " + j);
-		}
-		
-		return ans;
-	}*/
-	
-	/*public double factorial(double d)
-	{    
-		if (d == 0)    
-			return 1;    
-		else    
-			return(d * factorial(d-1));    
-	}*/ 
-	
+
 	public String removeLastChar(String s)
 	{
         s = s.substring(0, s.length()-1);
@@ -658,6 +620,6 @@ public class JavaCalculator extends JFrame
 	
     public static void main(String[] args)
 	{
-        JavaCalculator calc = new JavaCalculator();
+        new JavaCalculator();
     }
 } 

@@ -27,9 +27,10 @@ public class ChickenBrr {
 	}
 	public static void process() {
 		b = true;
+		Scanner s = new Scanner(System.in);
+
 		while (b) {
 			try {
-				Scanner s = new Scanner(System.in);
 				System.out.print("First Chicken:\nOrder Number (number only)? ");
 				number = Integer.parseInt(s.nextLine());
 				System.out.print("Size (6, 8, and 10 only)? ");
@@ -54,6 +55,8 @@ public class ChickenBrr {
 				main(null);
 			}
 		}
+
+		s.close();
 	}
 
 	public static void main(String[] args) {
