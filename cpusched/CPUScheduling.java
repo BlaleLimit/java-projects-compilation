@@ -442,18 +442,20 @@ public class CPUScheduling {
                 System.out.print("========================================\n\n");
 				choice(size, array);
             }
+			scan.close();
         }
+		
     }
     public static int input() {
 		int temp = 0;
         Scanner scan = new Scanner(System.in);
 
-        while(true) {
+        while (true) {
             try {
                 System.out.print("Input Number of Processes [2-9]: ");  
                 temp = scan.nextInt();
 
-                if(temp >= 2 && temp <= 9) {
+                if (temp >= 2 && temp <= 9) {
                     break;
                 } else {
                     System.out.print("========================================\n");
@@ -467,6 +469,7 @@ public class CPUScheduling {
                 main(null);
             }
         }
+		scan.close();
 
         return temp;
     }
@@ -512,6 +515,7 @@ public class CPUScheduling {
 					}
 				}
 			}
+			scan.close();
 		} catch(Exception ex) {
 			System.out.print("========================================\n");
 			System.out.println("Invalid Input"); 
@@ -553,6 +557,7 @@ public class CPUScheduling {
 				}
 			}
 		}
+		scan.close();
 
 		return array;
     }
@@ -718,7 +723,9 @@ public class CPUScheduling {
         System.out.println("\tN = Exit algorithm");
         System.out.print("Option: ");
 
-        return scan.next().charAt(0);
+		char option = scan.next().charAt(0);
+		scan.close();
+        return option;
     }
     public static char repeatInput() {
         Scanner scan = new Scanner(System.in);
@@ -730,7 +737,9 @@ public class CPUScheduling {
         System.out.println("\tC = Exit the program");
         System.out.print("Option: ");
 
-        return scan.next().charAt(0);
+		char option = scan.next().charAt(0);
+		scan.close();
+        return option;
     }
 	public static int[] pidList(int size) {
 		int[] pid = new int[size];

@@ -47,7 +47,7 @@ public class ClockMoon extends JPanel implements ActionListener {
     
     private void initImage() {
         try {
-            moon = ImageIO.read(getClass().getResource("/images/moon.png"));
+            moon = ImageIO.read(getClass().getResource("images/moon.png"));
         }
         catch (IOException ex) {
             Logger.getLogger(ClockMoon.class.getName()).log(Level.SEVERE, null, ex);
