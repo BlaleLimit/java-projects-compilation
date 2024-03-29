@@ -16,12 +16,14 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Arrays;
 
+// javac Notepad.java && java Notepad.java
+
 public class Notepad extends JPanel implements ActionListener {
     final JFrame f, frameSearch;
     final JTextArea ta;
     final JPanel p1, p2;
     final JButton load, save, clear, close, sort, search, replace, countWord, countSent, frequency;
-    final String path = "src/notepad/noname.txt";
+    final String path = "noname.txt"; // "src/notepad/noname.txt";
 
     public Notepad() {
         f = new JFrame("A Notepad");
@@ -95,6 +97,8 @@ public class Notepad extends JPanel implements ActionListener {
                 System.out.println("File Not Found " + fe);
             } catch (IOException ioe) {
                 System.out.println("IOException");
+            } finally {
+                    System.out.println("Loaded File");
             }
         }
 
@@ -108,6 +112,8 @@ public class Notepad extends JPanel implements ActionListener {
                     System.out.println("File Not Found");
                 } catch (IOException ioe) {
                     System.out.println("IOException");
+                } finally {
+                    System.out.println("Saved File");
                 }
             }
         }
